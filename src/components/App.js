@@ -1,13 +1,17 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from '../store.js';
+import BooksList from './BooksList';
 
-import React from "react";
-import './../styles/App.css';
 
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <Provider store={store}>
+      <div className="App">
+        <BooksList />
+      </div>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
